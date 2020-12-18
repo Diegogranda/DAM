@@ -51,15 +51,30 @@ public class CotxeSegonaPart_diego_granda extends Cotxe_Diego_Granda {
     }
 
     }
-    public void CanviarMarchaAuto(char a) throws Exception{
-        if (a == '+') {
-            switch(marchaAuto){
-                case
+    public void CanviarMarchaAuto(char a) throws Exception {
+        if (tipuscanvi.equals(TipusCanvi.CanviAutomatic) && a == '+') {
+            switch (marchaAuto) {
+                case R:marchaAuto = marchasAuto.N;
+                    break;
+                case N:marchaAuto = marchasAuto.F;
+                    break;
+                case F:marchaAuto = marchasAuto.R;
+                    break;
+                default:
+                    throw new Exception("No se puede hacer esto");
             }
 
+        } else if (tipuscanvi.equals(TipusCanvi.CanviAutomatic) && a == '-') {
+            switch (marchaAuto) {
+                case R:marchaAuto = marchasAuto.F;
+                case F:marchaAuto = marchasAuto.N;
+                case N:marchaAuto = marchasAuto.R;
+                default:
+                    throw new Exception("no se puede hacer esto");
+            }
 
         }
 
-    }
 
+    }
 }
