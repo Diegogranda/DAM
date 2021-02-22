@@ -9,6 +9,9 @@ public class CotxeSegonaPart_diego_granda extends Cotxe_Diego_Granda {
         super(marca, model, tipuscanvi);
     }
     //Marchas inicializan en neutro
+
+
+
     private marchasAuto marchaAuto= marchasAuto.N;
     private marchasManual marchaManual= marchasManual.N;
     //Enums con las marchas
@@ -20,6 +23,9 @@ public class CotxeSegonaPart_diego_granda extends Cotxe_Diego_Granda {
         R,N,F
     }
     //metodos a implementar
+
+
+
     public void CanviarMarxaManual(char a) throws Exception{
     if (tipuscanvi.equals(TipusCanvi.CanviManual) && a=='+'){
         switch (marchaManual){
